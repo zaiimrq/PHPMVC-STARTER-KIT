@@ -1,0 +1,27 @@
+{
+    "name": "zaiimrq/phpmvc-starter-kit",
+    "description": "PHPMVC STARTER KIT",
+    "type": "project",
+    "require": {
+        "php": "^8.3"
+    },
+    "authors": [
+        {
+            "name": "zaiimrq",
+            "email": "zaiimrq@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "zaiimrq\\": "app"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "zaiimrq\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
