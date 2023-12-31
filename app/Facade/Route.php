@@ -18,8 +18,12 @@ class Route
 
     public static function boot(): mixed
     {
-        $path       = $_SERVER["QUERY_STRING"] !== "" ? $_SERVER["QUERY_STRING"] : '/';
+        $path       = "/";
         $method     = $_SERVER["REQUEST_METHOD"];
+
+        if (isset($_SERVER["QUERY_STRING"]) && $_SERVER["QUERY_STRING"] !== "") {
+            $path = $_SERVER["QUERY_STRING"];
+        }
 
         foreach (self::$routes as $route) {
 
